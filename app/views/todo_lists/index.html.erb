@@ -1,0 +1,19 @@
+<h1>Todo Lists</h1>
+
+
+<% @todo_lists.each do |todo_list| %>
+
+    <div class="todo_list_item" id="<%= dom_id(todo_list) %>">
+        <div class="todo_list_item_details">
+           <h2><%= todo_list.title %></h2>
+           <h2><%= todo_list.description %></h2>
+        </div>
+        <div class="todo_list_item_actions">
+            <%= link_to "List Items", todo_list_todo_items_path(todo_list) %>
+            <%= link_to 'Show', todo_list %>
+            <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+            <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+    </div>
+    <!--<hr/>-->
+<% end %>
