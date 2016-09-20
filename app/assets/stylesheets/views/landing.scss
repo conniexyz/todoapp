@@ -20,6 +20,10 @@
  color: white;
  }
  
- 
 
+@media all and (max-width: 1199px) {
+  .image-box-container {
+    max-width: 600px;
+  } 
+}    //Going Responsive in all media
 

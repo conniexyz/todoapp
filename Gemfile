@@ -1,17 +1,10 @@
 source 'https://rubygems.org'
 
+#ruby "2.3.0"
+#ruby "2.3.1"
 
-gem 'bootstrap-sass'
 # gem 'font-awesome'
 gem "font-awesome-rails"
-
-
-
-group :production do
-gem 'rails_12factor'
-end
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
@@ -42,6 +35,14 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#added gem to tally with JX
+gem 'jwt'
+gem 'active_model_serializers'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'slim-rails'
+gem 'figaro'
+gem 'rack-cors', require: 'rack/cors'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -63,3 +64,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :production do
+gem 'rails_12factor'
+end

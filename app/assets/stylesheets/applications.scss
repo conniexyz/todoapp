@@ -3,10 +3,11 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome";
-
-@import "common";
+@import "components/*";
 @import "views/*";
+
+@import "font-awesome";
+@import "common";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
